@@ -1,10 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm run start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,33 +10,22 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Technologies used
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- TypeScript
+- Material UI
+- Redux / Redux Saga
+- Jest / Enzyme
+- react-infinite-scroll-component (https://www.npmjs.com/package/react-infinite-scroll-component)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Improvements to make
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- There are definitely a lot of things to improve in the design. I decided to load the prints by sets of 12 objects as I'm using a responsive grid to display them and 12 is a multiple of 4, 3, 2 and 1. I also decided to use the Skeleton component to show the user that the next objects are being fetched.
+- End To End Testing (using Cypress.io) : This is not really mandatory for an app of this size but it is for an application with more features
+- The React Infinite Scroll Component contains deprecated code but it's definitely a huge gain of time.
