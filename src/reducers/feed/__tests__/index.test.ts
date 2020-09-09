@@ -23,12 +23,14 @@ describe('Feed Reducer', () => {
     })
 
     it('FEED_SUCCEESS', () => {
-        const FEEDED_INITIAL_STATE = { ...INITIAL_STATE, prints: [0] };
-        expect(feedReducer(FEEDED_INITIAL_STATE, feedSuccess([1, 3, 5], 'nextUrl'))).toEqual({
+        const people = [{ role: 'Artist', displayname: 'Robert' }]
+        const print = { images: [], title: 'print', dated: '1990', people };
+        const FEEDED_INITIAL_STATE = { ...INITIAL_STATE, prints: [print] };
+        expect(feedReducer(FEEDED_INITIAL_STATE, feedSuccess([print, print, print], 'nextUrl'))).toEqual({
             ...FEEDED_INITIAL_STATE,
             loading: false,
             nextUrl: 'nextUrl',
-            prints: [...FEEDED_INITIAL_STATE.prints, 1, 3, 5]
+            prints: [...FEEDED_INITIAL_STATE.prints, print, print, print]
         })
     })
 })

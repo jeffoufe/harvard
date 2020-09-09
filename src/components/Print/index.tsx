@@ -27,7 +27,7 @@ const Print = ({ print }: PrintProps) => {
                     )
                 }
                 <div className={classes.legend}>
-                    <div className={classes.title}>{print.title}</div>
+                    <div>{print.title}</div>
                     {!!artist && !!artist.displayname && <div>{artist.displayname}</div>}
                     <div>{print.dated}</div>
                 </div>

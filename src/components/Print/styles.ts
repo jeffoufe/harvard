@@ -18,12 +18,6 @@ export default makeStyles((theme: Theme) =>
         },
         legend: {
             marginTop: 10
-        },
-        title: {
-            width: '100%',
-            textOverflow: 'ellipsis',
-            overflow: 'hidden',
-            whiteSpace: 'nowrap'
         }
     })
 )

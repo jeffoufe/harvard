@@ -30,6 +30,7 @@ describe('Feed', () => {
     let mount;
     let wrapper;
     let loadingWrapper;
+    let errorWrapper;
 
     beforeAll(() => {
         mount = createMount();
@@ -58,6 +59,23 @@ describe('Feed', () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.find('Print').length).toEqual(2)
         expect(mockDispatchFn).toHaveBeenCalledWith(fetchFeed())
+    })
+
+    it('Render correctly: error', () => {
+        jest.spyOn(redux, 'useSelector').mockReturnValueOnce({
+            error: 'error',
+            prints: [],
+            loading: false
+        }); 
+        
+        errorWrapper = mount(
+            <Context.Provider value={[true]} >
+                <Feed />
+            </Context.Provider>
+        )
+
+        expect(errorWrapper).toMatchSnapshot();
+        expect(errorWrapper.find('ForwardRef(Alert)').length).toEqual(1)
     })
 
     it('Render correctly: loading', () => {

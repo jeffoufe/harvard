@@ -183,18 +183,18 @@ exports[`Drawer render correctly 1`] = `
             >
               <MissingImage>
                 <div
-                  className="makeStyles-missingImageContainer-6"
+                  className="makeStyles-missingImageContainer-5"
                 >
                   <ForwardRef
-                    className="makeStyles-missingImageIcon-7"
+                    className="makeStyles-missingImageIcon-6"
                     fontSize="large"
                   >
                     <WithStyles(ForwardRef(SvgIcon))
-                      className="makeStyles-missingImageIcon-7"
+                      className="makeStyles-missingImageIcon-6"
                       fontSize="large"
                     >
                       <ForwardRef(SvgIcon)
-                        className="makeStyles-missingImageIcon-7"
+                        className="makeStyles-missingImageIcon-6"
                         classes={
                           Object {
                             "colorAction": "MuiSvgIcon-colorAction",
@@ -212,7 +212,7 @@ exports[`Drawer render correctly 1`] = `
                       >
                         <svg
                           aria-hidden={true}
-                          className="MuiSvgIcon-root makeStyles-missingImageIcon-7 MuiSvgIcon-fontSizeLarge"
+                          className="MuiSvgIcon-root makeStyles-missingImageIcon-6 MuiSvgIcon-fontSizeLarge"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -228,9 +228,7 @@ exports[`Drawer render correctly 1`] = `
               <div
                 className="makeStyles-legend-4"
               >
-                <div
-                  className="makeStyles-title-5"
-                >
+                <div>
                   Print
                 </div>
                 <div>
@@ -394,10 +392,10 @@ exports[`Drawer render correctly 2`] = `
         className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3"
       >
         <WithStyles(ForwardRef(Paper))
-          className="makeStyles-paper-8"
+          className="makeStyles-paper-7"
         >
           <ForwardRef(Paper)
-            className="makeStyles-paper-8"
+            className="makeStyles-paper-7"
             classes={
               Object {
                 "elevation0": "MuiPaper-elevation0",
@@ -432,19 +430,17 @@ exports[`Drawer render correctly 2`] = `
             }
           >
             <div
-              className="MuiPaper-root makeStyles-paper-8 MuiPaper-elevation1 MuiPaper-rounded"
+              className="MuiPaper-root makeStyles-paper-7 MuiPaper-elevation1 MuiPaper-rounded"
             >
               <img
                 alt="Print"
-                className="makeStyles-printImage-9"
+                className="makeStyles-printImage-8"
                 src="url"
               />
               <div
-                className="makeStyles-legend-11"
+                className="makeStyles-legend-10"
               >
-                <div
-                  className="makeStyles-title-12"
-                >
+                <div>
                   Print
                 </div>
                 <div>
