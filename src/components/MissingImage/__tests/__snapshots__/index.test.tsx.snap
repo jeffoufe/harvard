@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MissingImage renders correctly 1`] = `
+<div
+  className="makeStyles-missingImageContainer-1"
+>
+  <BrokenImageIcon
+    className="makeStyles-missingImageIcon-2"
+    fontSize="large"
+  />
+</div>
+`;

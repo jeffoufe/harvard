@@ -5,7 +5,10 @@ import {
 } from './constants';
 
 export interface Print {
-
+    title: string,
+    images: Array<{
+        baseimageurl: string
+    }>
 }
 
 export interface FeedState {

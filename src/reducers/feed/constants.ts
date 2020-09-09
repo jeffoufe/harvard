@@ -1,4 +1,4 @@
-export const INITIAL_URL = 'https://api.harvardartmuseums.org/objec?classification=Prints&hasimage=1&apikey=c28e4be0-4c0e-11ea-90d6-25d9a9fe80fc&size=10&page=1'
+export const INITIAL_URL = 'https://api.harvardartmuseums.org/object?classification=Prints&hasimage=1&sortorder=desc&apikey=c28e4be0-4c0e-11ea-90d6-25d9a9fe80fc&size=12&page=1'
 
 export const INITIAL_STATE = {
     loading: true,
