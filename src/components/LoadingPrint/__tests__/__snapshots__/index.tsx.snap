@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingPrint renders correctly 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  lg={3}
+  md={4}
+  sm={6}
+  xs={12}
+>
+  <WithStyles(ForwardRef(Paper))
+    className="makeStyles-paper-1"
+  >
+    <WithStyles(ForwardRef(Skeleton))
+      height={200}
+      variant="rect"
+    />
+    <WithStyles(ForwardRef(Skeleton))
+      className="makeStyles-legend-4"
+      variant="text"
+    />
+    <WithStyles(ForwardRef(Skeleton))
+      variant="text"
+    />
+    <WithStyles(ForwardRef(Skeleton))
+      variant="text"
+    />
+  </WithStyles(ForwardRef(Paper))>
+</WithStyles(ForwardRef(Grid))>
+`;

@@ -11,36 +11,75 @@ import Context from '../../../Context';
 describe('Feed', () => {
     const mockDispatchFn = jest.fn()
 
-    const store = createStore(feedReducer, INITIAL_STATE);
+    const people = [{ role: 'Artist', displayname: 'Robert' }]
+
+    const store = createStore(
+        feedReducer, 
+        {
+            ...INITIAL_STATE,
+            prints: [
+                { images: [], title: 'print', dated: '1990', people },
+                { images: [], title: 'print 2', dated: '1991', people },
+            ]
+        }
+    );
 
     jest.spyOn(React, 'useEffect').mockImplementation((f: any) => f());
     jest.spyOn(redux, 'useDispatch').mockReturnValue(mockDispatchFn);
-    jest.spyOn(redux, 'useSelector').mockReturnValue({
-        prints: store.getState().prints,
-        loading: store.getState().loading
-    });
 
     let mount;
     let wrapper;
+    let loadingWrapper;
 
     beforeAll(() => {
         mount = createMount();
     });
+
+    afterEach(() => {
+        jest.clearAllMocks()
+    })
     
     afterAll(() => {
         mount.cleanUp();
     });
 
-    it('Renders correctly', () => {
+    it('Renders correctly : prints loaded', () => {
+        jest.spyOn(redux, 'useSelector').mockReturnValueOnce({
+            prints: store.getState().prints,
+            loading: store.getState().loading
+        });
+
         wrapper = mount(
             <Context.Provider value={[true]} >
                 <Feed />
             </Context.Provider>
         );
+
         expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find('Print').length).toEqual(2)
+        expect(mockDispatchFn).toHaveBeenCalledWith(fetchFeed())
     })
 
-    it('UseEffect', () => {
-        expect(mockDispatchFn).toHaveBeenCalledWith(fetchFeed())
+    it('Render correctly: loading', () => {
+        jest.spyOn(redux, 'useSelector').mockReturnValueOnce({
+            prints: [],
+            loading: true
+        });
+    
+        loadingWrapper = mount(
+            <Context.Provider value={[true]} >
+                <Feed />
+            </Context.Provider>
+        )
+
+        expect(loadingWrapper).toMatchSnapshot();
+        expect(loadingWrapper.find('Print').length).toEqual(0)
+        expect(loadingWrapper.find('LoadingPrint').length).toEqual(4)
+    })
+
+    it('Handlers', () => {
+        const InfiniteScrollerWrapper = wrapper.find('InfiniteScroll');
+        InfiniteScrollerWrapper.props()['next']();
+        expect(mockDispatchFn).toHaveBeenCalledWith(fetchFeed())  
     })
 })

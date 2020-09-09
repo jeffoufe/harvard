@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Drawer, IconButton, Divider, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import BrushIcon from '@material-ui/icons/Brush';
-import { useStyles } from './styles';
+import useStyles from './styles';
 import Context from '../../Context';
 
 const LeftDrawer = () => {
@@ -20,7 +20,7 @@ const LeftDrawer = () => {
             }}
         >
             <div>
-                <IconButton onClick={handleDrawerClose}>
+                <IconButton onClick={handleDrawerClose} className={classes.homeButton}>
                     <ChevronLeftIcon />
                     Harvard
                 </IconButton>

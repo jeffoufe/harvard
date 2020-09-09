@@ -4,11 +4,18 @@ import {
     FEED_FAILURE
 } from './constants';
 
+export interface People {
+    role: string,
+    displayname: string
+}
+
 export interface Print {
     title: string,
+    dated: string,
     images: Array<{
         baseimageurl: string
-    }>
+    }>,
+    people: Array<People>
 }
 
 export interface FeedState {

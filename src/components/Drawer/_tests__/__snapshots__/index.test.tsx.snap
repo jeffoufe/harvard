@@ -60,7 +60,7 @@ exports[`Drawer render correctly 1`] = `
                 >
                   <div>
                     <button
-                      class="MuiButtonBase-root MuiIconButton-root"
+                      class="MuiButtonBase-root MuiIconButton-root makeStyles-homeButton-4"
                       tabindex="0"
                       type="button"
                     >
@@ -197,9 +197,11 @@ exports[`Drawer render correctly 1`] = `
                 >
                   <div>
                     <WithStyles(ForwardRef(IconButton))
+                      className="makeStyles-homeButton-4"
                       onClick={[Function]}
                     >
                       <ForwardRef(IconButton)
+                        className="makeStyles-homeButton-4"
                         classes={
                           Object {
                             "colorInherit": "MuiIconButton-colorInherit",
@@ -217,14 +219,14 @@ exports[`Drawer render correctly 1`] = `
                       >
                         <WithStyles(ForwardRef(ButtonBase))
                           centerRipple={true}
-                          className="MuiIconButton-root"
+                          className="MuiIconButton-root makeStyles-homeButton-4"
                           disabled={false}
                           focusRipple={true}
                           onClick={[Function]}
                         >
                           <ForwardRef(ButtonBase)
                             centerRipple={true}
-                            className="MuiIconButton-root"
+                            className="MuiIconButton-root makeStyles-homeButton-4"
                             classes={
                               Object {
                                 "disabled": "Mui-disabled",
@@ -237,7 +239,7 @@ exports[`Drawer render correctly 1`] = `
                             onClick={[Function]}
                           >
                             <button
-                              className="MuiButtonBase-root MuiIconButton-root"
+                              className="MuiButtonBase-root MuiIconButton-root makeStyles-homeButton-4"
                               disabled={false}
                               onBlur={[Function]}
                               onClick={[Function]}

@@ -17,15 +17,5 @@ export default makeStyles((theme: Theme) =>
         grid: {
             flexGrow: 1
         },
-        paper: {
-            padding: theme.spacing(2),
-            textAlign: 'center',
-            color: theme.palette.text.secondary,
-            marginBottom: 10
-        },
-        printImage: {
-            maxHeight: 200,
-            maxWidth: '100%'
-        }
     })
 )
