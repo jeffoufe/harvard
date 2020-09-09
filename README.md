@@ -31,4 +31,5 @@ Bootstrapped with [Create React App](https://github.com/facebook/create-react-ap
 - There are definitely a lot of things to improve in the design. I decided to load the prints by sets of 12 objects as I'm using a responsive grid to display them and 12 is a multiple of 4, 3, 2 and 1. I also decided to use the Skeleton component to show the user that the next objects are being fetched.
 - End To End Testing (using Cypress.io) : This is not really mandatory for an app of this size but it is for an application with more features
 - The React Infinite Scroll Component contains deprecated code but it's definitely a huge gain of time.
+- Adding pre-commit hooks would prevent devs from pushing code when unit tests don't pass 
 - The error handling is very trivial. Displaying a different message according to the status code would be a good improvement.
