@@ -12,11 +12,10 @@ const LoadingPrints = [...Array(4).keys()].map((index: number) => <LoadingPrint 
 const Feed = () => {
     const dispatch = useDispatch();
     const classes = useStyles();
+    const fetchPrints = () => dispatch(fetchFeed());
     const { prints, loading, nextUrl, error } = useSelector((state: FeedState) => state);
 
-    useEffect(() => {
-        dispatch(fetchFeed())
-    }, [dispatch]);
+    useEffect(fetchPrints, [dispatch]);
 
     return (
         <>
@@ -29,7 +28,7 @@ const Feed = () => {
                     <InfiniteScroll
                         className='MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3'
                         dataLength={prints.length}
-                        next={() => dispatch(fetchFeed())}
+                        next={fetchPrints}
                         hasMore={!!nextUrl}
                         pullDownToRefresh={false}
                         loader={LoadingPrints}
