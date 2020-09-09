@@ -7,7 +7,7 @@ import Context from "../../Context";
 
 const TopBar = () => {
     const classes = useStyles();
-    const [isMenuOpen, setMenuOpen] = useContext(Context);
+    const { isMenuOpen, setMenuOpen } = useContext(Context);
     const handleDrawerOpen = () => setMenuOpen(true);
     
     return (

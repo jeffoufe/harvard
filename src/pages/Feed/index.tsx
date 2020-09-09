@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { LoadingPrint, Print } from '../../components';
 import { fetchFeed } from '../../reducers/feed/actions';
@@ -12,10 +12,10 @@ const LoadingPrints = [...Array(4).keys()].map((index: number) => <LoadingPrint 
 const Feed = () => {
     const dispatch = useDispatch();
     const classes = useStyles();
-    const fetchPrints = () => dispatch(fetchFeed());
+    const fetchPrints = useCallback(() => dispatch(fetchFeed()), [dispatch]);
     const { prints, loading, nextUrl, error } = useSelector((state: FeedState) => state);
 
-    useEffect(fetchPrints, [dispatch]);
+    useEffect(() => { fetchPrints() }, [dispatch, fetchPrints]);
 
     return (
         <>

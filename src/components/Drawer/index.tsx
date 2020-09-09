@@ -7,7 +7,7 @@ import Context from '../../Context';
 
 const LeftDrawer = () => {
     const classes = useStyles();
-    const [isMenuOpen, setMenuOpen] = useContext(Context);
+    const { isMenuOpen, setMenuOpen } = useContext(Context);
     const handleDrawerClose = () => setMenuOpen(false);
 
     return (

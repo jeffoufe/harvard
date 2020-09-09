@@ -35,12 +35,12 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 const App = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
   const classes = useStyles();
   const drawerClasses = useDrawerStyles();
   return (
     <Provider store={store}>
-      <Context.Provider value={[isMenuOpen, setMenuOpen]}>
+      <Context.Provider value={{isMenuOpen, setMenuOpen}}>
         <div className={classes.root}>
           <CssBaseline />
           <TopBar />
