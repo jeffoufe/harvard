@@ -17,8 +17,12 @@ describe('Drawer', () => {
     });
 
     it('render correctly', () => {
+        const context = {
+            isMenuOpen: true,
+            setMenuOpen: closeDrawerHandler
+        }
         wrapper = mount(
-            <Context.Provider value={[true, closeDrawerHandler]}>
+            <Context.Provider value={context}>
                 <Drawer />
             </Context.Provider>
         )

@@ -17,8 +17,12 @@ describe('TopBar', () => {
     });
 
     it('render correctly', () => {
+        const context = {
+            isMenuOpen: true,
+            setMenuOpen: openDrawerHandler
+        }
         wrapper = mount(
-            <Context.Provider value={[true, openDrawerHandler]}>
+            <Context.Provider value={context}>
                 <TopBar />
             </Context.Provider>
         )
